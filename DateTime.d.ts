@@ -131,6 +131,13 @@ declare namespace ReactDatetimeClass {
          */
         isValidDate?: (currentDate: any, selectedDate: any) => boolean;
         /*
+         Replace the rendering of the input element. The function has the following arguments: 
+         the default calculated props for the input, openCalendar (a function which opens the calendar) 
+         and closeCalendar (a function which closes the calendar). Must return a React component or null. 
+         See Customize the Input Appearance.
+        */
+        renderInput?: (props: any, openCalendar: Function, closeCalendar: Function) => JSX.Element;
+        /*
          Customize the way that the days are shown in the day picker. The accepted function has
          the selectedDate, the current date and the default calculated props for the cell,
          and must return a React component. See appearance customization
